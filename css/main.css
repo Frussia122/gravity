@@ -28,6 +28,9 @@ body {
   margin: 0;
   font-family: "Fira Sans", sans-serif;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 img {
   max-width: 100%;
@@ -36,6 +39,12 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.active {
+  color: #1434E1;
+  display: flex !important;
+  opacity: 1 !important;
 }
 
 li {
@@ -87,12 +96,17 @@ li {
   font-size: 1.4rem;
   text-align: center;
   letter-spacing: 4px;
+  cursor: pointer;
   text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
 }
 .button--works {
   max-width: 23rem;
   line-height: 1;
   padding: 23px 24px 22px 24px;
+}
+.button:hover {
+  background-color: black;
 }
 
 .section-title {
@@ -164,9 +178,13 @@ li {
   color: #fff;
   z-index: 100;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 .arrows--testimonials {
   bottom: 20rem;
+}
+.arrows:hover {
+  background-color: #919191;
 }
 
 .arrow__right {
@@ -247,7 +265,9 @@ li {
   position: absolute;
   left: 58rem;
   top: 36rem;
-  width: 40rem;
+  width: 100%;
+  margin-right: 2rem;
+  max-width: 40rem;
   height: 36rem;
   background-image: url(../img/video-bg.jpg);
   background-repeat: no-repeat;
@@ -348,6 +368,10 @@ li {
   max-width: 82.5rem;
 }
 
+.services__list-link:hover {
+  color: #1434E1;
+}
+
 .features__right-author {
   display: flex;
   align-items: center;
@@ -377,19 +401,25 @@ li {
 .works__tabs-list {
   display: flex;
 }
-.works__tabs-list li {
-  margin-left: 2.5rem;
-  cursor: pointer;
-  letter-spacing: 4px;
+
+.tabs__nav-btn {
+  border: none;
+  background-color: transparent;
   opacity: 0.3;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
-.works__tabs-list li:hover {
+.tabs__nav-btn:hover {
   color: #1434E1;
   opacity: 1;
 }
 
 .works__gallery {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
 }
 
@@ -464,5 +494,281 @@ li {
   justify-content: space-between;
   padding-bottom: 14rem;
   padding-top: 7rem;
+}
+
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  padding: 1rem;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(196, 196, 196, 0.9);
+}
+
+.modal__dialog {
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
+  background-color: gray;
+  padding: 2rem;
+}
+
+.modal-work__close {
+  display: flex;
+  flex-direction: column;
+}
+
+.close-icon {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.close-icon:hover {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 1328px) {
+  .works__gallery {
+    justify-content: center;
+  }
+}
+@media (max-width: 1100px) {
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .about--background, .features--background {
+    background-image: none;
+  }
+
+  .works__footer {
+    justify-content: center;
+  }
+
+  .button--works {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 900px) {
+  .about__right {
+    margin-top: 6rem;
+  }
+
+  .services__list {
+    margin-left: 1rem;
+  }
+
+  .section-title {
+    margin-top: 3rem;
+  }
+
+  .features__img {
+    left: -29rem;
+    z-index: -1;
+    top: 6rem;
+  }
+
+  .features__right {
+    z-index: 1000;
+  }
+}
+@media (max-width: 690px) {
+  .section-title--testimonials {
+    max-width: 66%;
+  }
+
+  .main-right__video {
+    left: 2rem;
+    top: 47rem;
+  }
+
+  .main {
+    background-image: none;
+  }
+
+  .main__left {
+    max-width: 690px;
+  }
+
+  .main__title {
+    text-align: center;
+  }
+
+  .main__description {
+    text-align: center;
+  }
+
+  .button--main {
+    margin: 0 auto;
+  }
+
+  .section-title {
+    margin-top: 0;
+  }
+}
+@media (max-width: 587px) {
+  .works__head {
+    flex-direction: column;
+  }
+
+  .works__tabs-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .section-title {
+    margin: auto;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+@media (max-width: 475px) {
+  .services__wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .services__list {
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+
+  .main-right__video {
+    top: 57rem;
+  }
+
+  .about {
+    background-image: none;
+  }
+
+  .section-title {
+    line-height: 2rem;
+    font-size: 2rem;
+    margin: auto;
+  }
+
+  li {
+    margin-bottom: 0;
+  }
+
+  .features__img {
+    left: 17rem;
+    top: 10rem;
+  }
+
+  .works__tabs-list {
+    margin-top: 2rem;
+    justify-content: space-between;
+  }
+
+  .works__gallery-item {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .button--works {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .works__footer-text {
+    text-align: center;
+  }
+
+  .testimonials__slider-item {
+    background-position: 129px top;
+  }
+
+  .section-title--testimonials {
+    margin-left: 0;
+  }
+
+  .testimonials__slider-item-wrapper {
+    padding-left: 2rem;
+  }
+
+  .clients__head {
+    flex-direction: column;
+  }
+
+  .clients__text {
+    text-align: center;
+  }
+
+  .section-name--clients::before {
+    display: none;
+  }
+
+  .clients__firms {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .services {
+    margin-top: 0;
+  }
+
+  .clients__firms {
+    padding-top: 0;
+  }
+
+  .clients__firms-item {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 320px) {
+  .main__title {
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  .main__description {
+    font-size: 1.4;
+    line-height: 1.1;
+  }
+
+  .main-right__video {
+    left: 0;
+    margin-right: 2rem;
+  }
+
+  .section__right-description {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .section-author {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+  }
+
+  .works__footer {
+    padding: 0;
+  }
+
+  .testimonials__slider-item {
+    background-position: 45px top;
+  }
+
+  .testimonials__slider-item-wrapper {
+    padding-left: 0;
+  }
+
+  .about-author__post {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=main.css.map */

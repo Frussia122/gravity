@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +16,13 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="">
+
+
+
+
   <div class="site-container">
-    <header class="header">
+    <header class="header ">
   <div class="container">
     <div class="header__wrapper">
       <div class="logo"><a href="#">Gravity</a></div>
@@ -36,10 +41,10 @@
 
     <div class="container">
 
+      
 
-
-      <section class="main">
-        <div class="main__left">
+      <section class="main animate__animated animate__fadeInLeft">
+        <div class="main__left ">
           <div class="main__title">
             Work around you and your team
           </div>
@@ -61,7 +66,7 @@
 
 
 
-      <section class="about">
+      <section class="about wow bounceInUp">
         <div class="about__wrapper">
          
           <div class="about__right">
@@ -86,27 +91,27 @@
 
       <section class="services">
 
-        <div class="section-name">Services</div>
+        <div class="section-name wow bounceInLeft">Services</div>
 
-       <div class="services__wrapper">
+       <div class="services__wrapper wow bounceInLeft">
         <div class="section-title section-title--services">We love work hard and explore new things that’s why we cover lot of things. Check our service list and view details</div>
 
-        <div class="services__tags">
+        <div class="services__tags ">
           <ul class="services__list">  
-            <li> <a href="#">Multimedia</a>  </li>
-            <li> <a href="#">Interactive design</a>  </li>
-            <li> <a href="#">Packaging</a>  </li>
-            <li> <a href="#">Branding</a>  </li>
+            <li> <a class="services__list-link" href="#">Multimedia</a>  </li>
+            <li> <a class="services__list-link" href="#">Interactive design</a>  </li>
+            <li> <a class="services__list-link" href="#">Packaging</a>  </li>
+            <li> <a class="services__list-link" href="#">Branding</a>  </li>
           </ul>
           <ul class="services__list">
-            <li> <a href="#">Creative Strategy</a>  </li>
-            <li> <a href="#">UI/UX</a> </li>
-            <li> <a href="#">Coding</a>  </li>
+            <li> <a class="services__list-link" href="#">Creative Strategy</a>  </li>
+            <li> <a class="services__list-link" href="#">UI/UX</a> </li>
+            <li> <a class="services__list-link" href="#">Coding</a>  </li>
           </ul>
         </div>
        </div>
 
-       <div class="services__slider">
+       <div class="services__slider wow bounceInRight">
          <div class="services__slider-item">
            <div class="services__slider-img">
             <img  src="img/1slide-services.jpg" alt="">
@@ -118,7 +123,7 @@
            
          </div>
          
-         <div class="services__slider-item">
+         <div class="services__slider-item ">
           <div class="services__slider-img">
            <img  src="img/1slide-services.jpg" alt="">
            <div class="main-right__video-play main-right__video-play--services">
@@ -158,7 +163,7 @@
 
 
 
-      <section class="features features--background">
+      <section class="features features--background wow fadeInRight">
         <div class="features__wrapper">
          
 
@@ -202,62 +207,206 @@
 
 
 
-      <section class="works">
+      <section class="works wow bounceInUp">
         <div class="section-name">our works</div>
 
         <div class="works__head">
           <div class="section-title section-title--services">Our Works</div>
 
           <div class="works__tabs">
-            <ul class="works__tabs-list">
-              <li>All</li>
-              <li>Branding</li>
-              <li>Web</li>
-              <li>Development</li>
-              <li>Films</li>
-            </ul>
+            <div class="works__tabs-list">
+              <button class="tabs__nav-btn active" data-tab="#tab_1">All</button>
+              <button class="tabs__nav-btn " data-tab="#tab_2">Branding</button>
+              <button class="tabs__nav-btn " data-tab="#tab_3">Web</button>
+              <button class="tabs__nav-btn " data-tab="#tab_4">Development</button>
+              <button class="tabs__nav-btn " data-tab="#tab_5">Films</button>
+            </div>
           </div>
 
         </div>
 
 
-        <div class="works__gallery">
-          <div class="works__gallery-item">
-            <img src="img/gallery1.jpg" alt="">
-            <div class="main-right__video-play main-right__video-play--services">
-              <img src="img/play.png" alt="">
+        <div class="works__tabs-content">
+
+
+          
+          <div class="works__gallery active" id="tab_1">
+            <div class="works__gallery-item">
+              <img src="img/gallery1.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery2.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery5.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery4.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery5.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery6.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
             </div>
           </div>
-          <div class="works__gallery-item">
-            <img src="img/gallery2.jpg" alt="">
-            <div class="main-right__video-play main-right__video-play--services">
-              <img src="img/play.png" alt="">
+
+          <div class="works__gallery" id="tab_2">
+            <div class="works__gallery-item">
+              <img src="img/gallery1.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery2.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery5.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery4.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery5.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+          
+          </div>
+
+
+
+          <div class="works__gallery" id="tab_3">
+            <div class="works__gallery-item">
+              <img src="img/gallery1.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery2.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery5.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery4.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+           
+          </div>
+
+          <div class="works__gallery" id="tab_4">
+            <div class="works__gallery-item">
+              <img src="img/gallery1.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery2.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery5.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery4.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery5.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery6.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
             </div>
           </div>
-          <div class="works__gallery-item">
-            <img src="img/gallery5.jpg" alt="">
-            <div class="main-right__video-play main-right__video-play--services">
-              <img src="img/play.png" alt="">
+
+
+          <div class="works__gallery" id="tab_5">
+            <div class="works__gallery-item">
+              <img src="img/gallery1.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
             </div>
-          </div>
-          <div class="works__gallery-item">
-            <img src="img/gallery4.jpg" alt="">
-            <div class="main-right__video-play main-right__video-play--services">
-              <img src="img/play.png" alt="">
+            <div class="works__gallery-item">
+              <img src="img/gallery2.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
             </div>
-          </div>
-          <div class="works__gallery-item">
-            <img src="img/gallery5.jpg" alt="">
-            <div class="main-right__video-play main-right__video-play--services">
-              <img src="img/play.png" alt="">
+            <div class="works__gallery-item">
+              <img src="img/gallery5.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
             </div>
-          </div>
-          <div class="works__gallery-item">
-            <img src="img/gallery6.jpg" alt="">
-            <div class="main-right__video-play main-right__video-play--services">
-              <img src="img/play.png" alt="">
+            <div class="works__gallery-item">
+              <img src="img/gallery4.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
             </div>
+            <div class="works__gallery-item">
+              <img src="img/gallery5.jpg" alt="">
+              <div class="main-right__video-play main-right__video-play--services">
+                <img src="img/play.png" alt="">
+              </div>
+            </div>
+          
           </div>
+
         </div>
 
         <div class="works__footer">
@@ -269,7 +418,7 @@
       </section>
 
 
-      <section class="testimonials">
+      <section class="testimonials wow bounceIn">
         <div class="section-name">testimonials</div>
 
         <div class="testimonials__wrapper">
@@ -337,11 +486,11 @@
 
 
     </div>
-    <section class="clients">
+    <section class="clients wow fadeInRight">
       <div class="container">
         <div class="clients__wrapper">
           <div class="clients__head">
-            <div class="section-title section-title--testimonials">Our Clients</div>
+            <div class="section-title">Our Clients</div>
   
             <div class="clients__text">
               <div class="section-name section-name--clients">We worked with</div>
@@ -369,6 +518,23 @@
         </div>
       </div>
     </section>
+
+
+    <div class="modal">
+      <div class="modal-work__close">
+        <img class="close-icon" src="img/close.svg" alt="Close">
+      </div>
+      <div class="modal__dialog">
+        <div class="modal-work">
+          <div class="modal-work__content">
+            <img src="https://place-hold.it/800x500" alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
     <footer class="footer">
     <div class="footer__wrapper">
       <div class="logo logo--footer">Gravity</div>
